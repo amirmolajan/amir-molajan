@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>امیر ملاجان | مسئله‌حل‌کن</title>
+<meta name="description" content="وب‌سایت شخصی امیر ملاجان؛ مشاور مدیریت، حل‌کننده مسئله و علاقه‌مند به کسب‌وکار، مدیریت و رشد فردی.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#f4f0e8; --ink:#181715; --muted:#777168; --line:#d7d0c3;
+  --orange:#ee6b3b; --cream:#fffdf8; --blue:#283c58;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,calc(100% - 44px));margin:auto}
+nav{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:19px;font-weight:800;letter-spacing:-.04em}
+
+.nav{display:flex;gap:27px;font-size:13px;color:var(--muted)}
+.hero{min-height:calc(100vh - 78px);display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center;padding:70px 0 95px;direction:ltr}
+.hero>*{direction:rtl}
+.kicker{font-size:11px;letter-spacing:.13em;color:var(--orange);font-weight:700;margin-bottom:20px}
+h1{font-size:clamp(58px,9vw,125px);line-height:.94;letter-spacing:-.075em;margin:0;max-width:800px}
+.hero-copy{font-size:20px;line-height:1.9;color:#514c45;max-width:650px;margin:28px 0 0}
+.hero-copy b{color:var(--ink)}
+.cta{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:12px 21px;border:1px solid var(--ink);font-size:13px;font-weight:700;transition:.2s}
+.btn.dark{background:var(--ink);color:white}
+.btn:hover{transform:translateY(-2px)}
+.visual{display:flex;justify-content:center}
+.photo-frame{width:min(350px,82vw);aspect-ratio:4/5;background:var(--blue);position:relative;overflow:hidden;border-radius:180px 180px 12px 12px}
+.photo-frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);mix-blend-mode:screen;opacity:.9}
+.photo-label{position:absolute;bottom:18px;right:18px;left:18px;background:var(--cream);padding:11px 14px;font-size:11px;font-weight:700}
+section{border-top:1px solid var(--line);padding:110px 0}
+.section-title{display:grid;grid-template-columns:.35fr 1fr;gap:55px;margin-bottom:60px}
+.index{font-size:12px;color:var(--orange);font-weight:800}
+h2{font-size:clamp(38px,5vw,68px);line-height:1.05;letter-spacing:-.06em;margin:0}
+.lead{font-size:18px;line-height:2;color:var(--muted);max-width:720px;margin-top:20px}
+.problem{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pcard{background:var(--cream);border:1px solid var(--line);padding:30px;min-height:260px;position:relative;overflow:hidden}
+.pcard:after{content:"؟";position:absolute;left:-10px;bottom:-40px;font-size:150px;font-weight:800;color:#eee7db;z-index:0}
+.pcard>*{position:relative;z-index:1}
+.pnum{font-size:12px;color:var(--orange);font-weight:800}
+.pcard h3{font-size:25px;margin:45px 0 12px;letter-spacing:-.04em}
+.pcard p{color:var(--muted);line-height:1.9;margin:0}
+.story{display:grid;grid-template-columns:1fr 1.2fr;gap:90px;align-items:start}
+.quote{font-size:28px;line-height:1.8;font-weight:600;letter-spacing:-.03em;border-right:4px solid var(--orange);padding-right:24px}
+.path{border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:100px 1fr;gap:25px;padding:27px 0;border-bottom:1px solid var(--line)}
+.step .year{font-size:12px;color:var(--orange);font-weight:800}
+.step h3{margin:0 0 6px;font-size:20px}
+.step p{margin:0;color:var(--muted);line-height:1.9}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.service{padding:35px;background:var(--ink);color:white;min-height:220px}
+.service:nth-child(2){background:var(--orange)}
+.service:nth-child(3){background:var(--cream);color:var(--ink);border:1px solid var(--line)}
+.service:nth-child(4){background:var(--blue)}
+.service .tag{font-size:11px;opacity:.65}
+.service h3{font-size:29px;margin:45px 0 10px;letter-spacing:-.04em}
+.service p{margin:0;line-height:1.9;opacity:.78}
+.contact{background:var(--orange);padding:65px;display:flex;justify-content:space-between;align-items:end;gap:40px}
+.contact h2{max-width:720px}
+.contact p{font-size:17px;line-height:1.9;max-width:650px}
+.contact .btn{background:var(--ink);color:#fff;border-color:var(--ink)}
+footer{padding:35px 0 45px;display:flex;justify-content:space-between;color:var(--muted);font-size:11px}
+@media(max-width:800px){
+ .container{width:min(100% - 28px,1180px)}
+ .nav{display:none}.hero{grid-template-columns:1fr;padding:55px 0 75px}.visual{justify-content:flex-start}
+ .photo-frame{width:230px}.section-title,.story{grid-template-columns:1fr;gap:22px}.problem,.services{grid-template-columns:1fr}
+ .contact{padding:35px;display:block}.contact .cta{margin-top:25px} footer{display:block} footer div+div{margin-top:10px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+  <a class="brand" href="#">امیر ملاجان</a>
+  <div class="nav">
+    <a href="#me">من کیستم؟</a><a href="#thinking">مسئله‌ها</a><a href="#work">چه می‌کنم؟</a><a href="#contact">ارتباط</a>
+  </div>
+</nav>
+
+<header class="hero" id="me">
+  <div>
+    <div class="kicker">مشاور مدیریت · حل مسئله · یادگیری</div>
+    <h1>مسئله‌های واقعی،<br>راه‌حل‌های قابل اجرا.</h1>
+    <p class="hero-copy">مسئله‌های کسب‌وکار، تصمیم‌های سخت، ایده‌های نصفه‌نیمه و چیزهایی که <b>«باید یک فکری به حالشان کرد»</b>.</p>
+    <p class="hero-copy">اینجا درباره کسب‌وکار، مدیریت، تفکر و رشد فردی فکر می‌کنم؛ و تجربه‌ها و چیزهایی را که یاد می‌گیرم با دیگران به اشتراک می‌گذارم.</p>
+    <div class="cta"><a class="btn dark" href="#work">ببین چه کار می‌کنم ←</a><a class="btn" href="https://www.linkedin.com/in/amir-mollajan/" target="_blank">لینکدین من</a></div>
+  </div>
+  <div class="visual">
+    <div class="photo-frame">
+      <img src="amir-mollajan.jpg" alt="امیر ملاجان">
+      
+    </div>
+  </div>
+</header>
+
+<section id="thinking">
+  <div class="section-title">
+    <div class="index">۰۱ / مسئله‌ها</div>
+    <div><h2>سؤال‌هایی که<br>ذهنم را درگیر می‌کنند.</h2><p class="lead">من بیشتر از جواب‌های آماده، به سؤال‌های خوب علاقه دارم. این چهار حوزه، جاهایی هستند که بیشتر وقتم را در آن‌ها صرف فکر کردن و یاد گرفتن می‌کنم.</p></div>
+  </div>
+  <div class="problem">
+    <article class="pcard"><div class="pnum">۰۱</div><h3>کسب‌وکار</h3><p>چطور رشد کنیم؟ چطور مزیت بسازیم؟ و چرا بعضی کسب‌وکارها در یک نقطه متوقف می‌شوند؟</p></article>
+    <article class="pcard"><div class="pnum">۰۲</div><h3>مدیریت</h3><p>چطور یک سازمان بهتر کار می‌کند؟ از استراتژی و ساختار تا آدم‌ها و سیستم‌های مدیریتی.</p></article>
+    <article class="pcard"><div class="pnum">۰۳</div><h3>تفکر</h3><p>چطور بهتر فکر کنیم، تصمیم بگیریم، مسئله را بشناسیم و گرفتار جواب‌های ساده نشویم؟</p></article>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <div class="index">۰۲ / مسیر من</div>
+    <div><h2>از مهندسی صنایع<br>تا مشاوره مدیریت.</h2></div>
+  </div>
+  <div class="story">
+    <div class="quote">مسیر حرفه‌ای من از پایین شروع شد؛ یاد گرفتم قبل از اینکه برای مسئله‌ای نسخه بدهم، خود مسئله را بفهمم.</div>
+    <div class="path">
+      <div class="step"><div class="year">تحصیلات</div><div><h3>مهندسی صنایع</h3><p>مسیر دانشگاهی‌ام در مقطع کارشناسی و کارشناسی ارشد از مهندسی صنایع شکل گرفت؛ رشته‌ای که از همان ابتدا من را با نگاه سیستمی و حل مسئله درگیر کرد.</p></div></div>
+      <div class="step"><div class="year">شروع حرفه‌ای</div><div><h3>شروع از سطوح اجرایی مشاوره</h3><p>وارد دنیای مشاوره شدم و مسیرم را از سطوح پایین‌تر شروع کردم؛ از تحلیل و اجرا تا مواجهه مستقیم با مسائل واقعی سازمان‌ها.</p></div></div>
+      <div class="step"><div class="year">امروز</div><div><h3>مشاور مدیریت</h3><p>امروز تمرکزم روی کمک به مدیران و کسب‌وکارها در مسائل استراتژی، تحول سازمانی، توسعه کسب‌وکار و ساخت سیستم‌های مدیریتی است.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="section-title">
+    <div class="index">۰۳ / کاری که می‌کنم</div>
+    <div><h2>وقتی مسئله<br>واقعی است، وارد می‌شوم.</h2><p class="lead">در مشاوره، برای من مهم است که خروجی فقط یک فایل یا ارائه نباشد؛ مسئله باید به تصمیم، سیستم و اقدام تبدیل شود.</p></div>
+  </div>
+  <div class="services">
+    <article class="service"><div class="tag">01 / تحول</div><h3>تحول کسب‌وکار</h3><p>از بازطراحی ساختار و فرایند تا ساخت سیستم‌های مدیریتی و تبدیل استراتژی به اجرا.</p></article>
+    <article class="service"><div class="tag">02 / رشد</div><h3>توسعه کسب‌وکار</h3><p>پیدا کردن فرصت‌های رشد، بهبود فروش، توسعه بازار و طراحی مسیرهای جدید کسب‌وکار.</p></article>
+    <article class="service"><div class="tag">03 / تصمیم</div><h3>حل مسئله مدیریتی</h3><p>باز کردن مسائل پیچیده و تبدیل آن‌ها به چند تصمیم روشن و قابل اقدام.</p></article>
+    <article class="service"><div class="tag">04 / سیستم</div><h3>سیستم‌های مدیریت</h3><p>طراحی سازوکارهایی برای هدف‌گذاری، عملکرد، جلسات، KPI، OKR و مدیریت روزمره.</p></article>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <div class="index">۰۴ / چیزهایی که یاد می‌گیرم</div>
+    <div><h2>یادگیری برای من<br>پروژه‌ی تمام‌نشدنی است.</h2><p class="lead">کتاب می‌خوانم، کیس‌های کسب‌وکار را بررسی می‌کنم، ابزارهای جدید را امتحان می‌کنم و درباره چیزهایی که یاد می‌گیرم می‌نویسم و حرف می‌زنم.</p></div>
+  </div>
+  <div class="problem">
+    <article class="pcard"><div class="pnum">کتاب</div><h3>ایده‌ها</h3><p>از کتاب‌های مدیریت و استراتژی تا تفکر انتقادی و رشد فردی؛ ایده‌هایی که ارزش فکر کردن دارند.</p></article>
+    <article class="pcard"><div class="pnum">تجربه</div><h3>دنیای واقعی</h3><p>آنچه در پروژه‌ها و مواجهه با مدیران و سازمان‌ها می‌بینم؛ بدون فاصله گرفتن از واقعیت اجرا.</p></article>
+    <article class="pcard"><div class="pnum">ساختن</div><h3>امتحان کردن</h3><p>از AI و ابزارهای جدید تا ایده‌های شخصی؛ ترجیح می‌دهم بعضی چیزها را به‌جای فقط خواندن، بسازم.</p></article>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0;padding-bottom:40px">
+  <div class="contact">
+    <div><div class="kicker" style="color:#181715">۰۵ / ارتباط</div><h2>یک مسئله‌ی خوب دارید؟</h2><p>اگر مسئله‌ای در کسب‌وکارتان دارید که ارزش فکر کردن و حل کردن دارد، می‌توانیم درباره‌اش صحبت کنیم.</p></div>
+    <div class="cta"><a class="btn" href="https://www.linkedin.com/in/amir-mollajan/" target="_blank">با من در لینکدین در ارتباط باشید ←</a></div>
+  </div>
+</section>
+<footer><div>© ۱۴۰۵ امیر ملاجان</div><div>کسب‌وکار · مدیریت · تفکر · رشد</div></footer>
+</div>
+</body>
+</html>
